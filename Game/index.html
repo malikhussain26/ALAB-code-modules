@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBA 316 The DOM</title>
+  <script defer src="./script.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Rock - Paper - Scissors</h1>
+    <form id="game-form">
+      <input type="radio" name="choice" id="rock" value="rock">
+      <label for="rock">Rock</label>
+      <input type="radio" name="choice" id="paper" value="paper">
+      <label for="paper">Paper</label>
+      <input type="radio" name="choice" id="scissors" value="scissors">
+      <label for="scissors">Scissors</label>
+      <button type="submit">Play</button>
+    </form>
+
+    </div>
+    <div id="result"></div>
+    <div id="score-board">
+      <p>Wins: <span id="wins">0</span></p>
+      <p>Losses: <span id="losses">0</span></p>
+      <p>Ties: <span id="ties">0</span></p>
+    </div>
+  </div>
+</body>
+</html>
