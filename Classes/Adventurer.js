@@ -16,11 +16,13 @@ export default class Adventurer extends Character {
     this.inventory.push('bedroll', '50 gold coins')
   }
 
+  
   scout () {
     console.log(`${this.name} is scouting ahead...`);
     this.roll();
   }
 
+  // implement the useHealthPotion method
   useHealthPotion() {
     if (this.inventory.includes('potion')) {
       if ((this.health + 25) > Character.MAX_HEALTH) {
@@ -34,6 +36,7 @@ export default class Adventurer extends Character {
     }
   }
 
+  // dueling the enemy by random rolls
   duel(enemy) {
     let round = 1
     while (this.health > 50 && enemy.health > 50) {
@@ -62,6 +65,7 @@ export default class Adventurer extends Character {
         `)
       round++
     }
+    // winner gets decided randomly depending on how many rolls they won
     const winner = this.health > enemy.health ? this.name : enemy.name
     console.log(`${winner} WINS!!!`)
   }
